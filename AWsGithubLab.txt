@@ -1,0 +1,638 @@
+---------------------------------------------------------------- 
+Assignment 1  Implement GitHub Operations using git
+To manage GitHub operations effectively using Git, here are the essential steps:
+
+1. Setting Up
+Install Git if not installed. Download Git here and follow installation instructions.
+Configure Git with your GitHub user information:
+bash
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+2. Creating a Repository
+Create a new repository on GitHub:
+Go to GitHub and create a new repository, which can be either public or private.
+Note the URL of the repository, as you’ll need it in the next steps.
+
+3. Initializing a Repository Locally
+Open your terminal, navigate to your project directory, and initialize Git:
+bash
+git init
+Link your local repository to GitHub:
+bash
+git remote add origin https://github.com/username/repo_name.git
+Replace username and repo_name with your GitHub username and repository name.
+
+4. Adding Files to the Repository
+Stage files for commit:
+bash
+git add .
+Commit changes with a message:
+bash
+git commit -m "Initial commit"
+
+5. Pushing to GitHub
+Push your local commits to the GitHub repository:
+bash
+git push -u origin main
+
+6. Branch Management
+Create a new branch:
+bash
+git checkout -b new-branch-name
+Push the branch to GitHub:
+bash
+git push origin new-branch-name
+
+7. Making Changes and Committing
+Edit files as needed.
+Stage and commit changes:
+bash
+git add .
+git commit -m "Your descriptive commit message"
+
+8. Pulling Changes from GitHub
+Before pushing changes, it's a good practice to pull any updates from the main branch:
+bash
+git pull origin main
+
+9. Merging Branches
+Switch to the main branch and merge your branch after completing changes:
+bash
+git checkout main
+git merge new-branch-name
+10. Pushing Merged Changes
+Push merged changes to GitHub:
+bash
+git push origin main
+
+11. Deleting the Merged Branch
+Once the branch is merged, you may delete it locally and on GitHub:
+bash
+git branch -d new-branch-name
+git push origin --delete new-branch-name
+
+12. Cloning a Repository
+Clone an existing GitHub repository to your local machine:
+bash
+git clone https://github.com/username/repo_name.git
+# Check status and log
+git status
+git log
+-----------------------------------------------------------------
+Assignment 2 Implementing GitHub operations using git
+ Step 1: Creating a Repository
+1. *Sign in* to your GitLab account.
+2. *Create a new project*:
+   - Click the *"New Project"* button.
+   - Enter a project name, select the visibility level (public or private), and configure other necessary settings.
+   - Click *"Create project"* to complete the process.
+
+ Step 2: Cloning a Repository
+1. *Open your terminal* or command prompt.
+2. *Navigate to the directory* where you want to clone the repository:
+   bash
+   cd /path/to/your/directory
+   
+3. *Copy the repository URL* from GitLab.
+4. *Clone the repository* using:
+   bash
+   git clone <repository_url>
+   
+   - Replace <repository_url> with the URL copied from GitLab.
+   - This command clones the repository to your local machine.
+
+Step 3: Making Changes and Creating a Branch
+1. *Navigate into the cloned repository*:
+   bash
+   cd <repository_name>
+   
+2. *Create a new file* named example.txt using a text editor and add some content.
+3. *Save the file* and return to the command line.
+4. *Check the status* of the repository:
+   bash
+   git status
+   
+5. *Stage the changes* for commit:
+   bash
+   git add example.txt
+   
+6. *Commit the changes* with a descriptive message:
+   bash
+   git commit -m "Add content to example.txt"
+   
+7. *Create a new branch* named feature:
+   bash
+   git branch feature
+   
+8. *Switch to the feature branch*:
+   bash
+   git checkout feature
+   
+
+ Step 4: Pushing Changes to GitLab
+1. *Add the repository URL* as a remote:
+   bash
+   git remote add origin <repository_url>
+   
+   - Replace <repository_url> with your GitLab repository URL.
+2. *Push the feature branch* to GitLab:
+   bash
+   git push origin feature
+   
+3. *Verify* in your GitLab repository that the feature branch has been pushed successfully.
+
+ Step 5: Collaborating through Merge Requests
+1. *Create a merge request* on GitLab:
+   - Go to the repository on GitLab.
+   - Click on *"Merge Requests"* and then *"New Merge Request"*.
+   - Select feature as the source branch and main (or master) as the target branch.
+   - Review the changes and click *"Submit merge request"*.
+2. *Review and merge the merge request*:
+   - Add a title and description.
+   - Assign reviewers if needed.
+   - Once the merge request is approved, merge it into the target branch.
+
+ Step 6: Syncing Changes
+1. *Update your local repository* after the merge request is merged:
+   bash
+   git checkout main
+   git pull origin main
+   -----------------------------------------------------------
+ Assignment 3
+Implementing GitLab Operations Using Git*
+step 1 : Creating a Repository
+1. *Sign in* to your GitLab account.
+2. *Create a new project*:
+   - Click the *"New Project"* button.
+   - Enter a project name, select the visibility level (public or private), and configure other necessary settings.
+   - Click *"Create project"* to complete the process.
+
+step 2: Cloning a Repository
+1. *Open your terminal* or command prompt.
+2. *Navigate to the directory* where you want to clone the repository:
+   bash
+   cd /path/to/your/directory
+   
+3. Copy the repository URL* from GitLab.
+4. *Clone the repository* using:
+   bash
+   git clone <repository_url>
+   
+   - Replace <repository_url> with the URL copied from GitLab.
+   - This command clones the repository to your local machine.
+
+ step 3: Making Changes and Creating a Branch
+1. *Navigate into the cloned repository*:
+   bash
+   cd <repository_name>
+   
+2. *Create a new file* named example.txt using a text editor and add some content.
+3. *Save the file* and return to the command line.
+4. *Check the status* of the repository:
+   bash
+   git status
+   
+5. *Stage the changes* for commit:
+   bash
+   git add example.txt
+   
+6. *Commit the changes* with a descriptive message:
+   bash
+   git commit -m "Add content to example.txt"
+   
+7. *Create a new branch* named feature:
+   bash
+   git branch feature
+   
+8. *Switch to the feature branch*:
+   bash
+   git checkout feature
+   
+ step 4: Pushing Changes to GitLab
+1. *Add the repository URL* as a remote:
+   bash
+   git remote add origin <repository_url>
+   
+   - Replace <repository_url> with your GitLab repository URL.
+2. *Push the feature branch* to GitLab:
+   bash
+   git push origin feature
+   
+3. *Verify* in your GitLab repository that the feature branch has been pushed successfully.
+
+ step 5 : Collaborating through Merge Requests
+1. *Create a merge request* on GitLab:
+   - Go to the repository on GitLab.
+   - Click on *"Merge Requests"* and then *"New Merge Request"*.
+   - Select feature as the source branch and main (or master) as the target branch.
+   - Review the changes and click *"Submit merge request"*.
+2. *Review and merge the merge request*:
+   - Add a title and description.
+   - Assign reviewers if needed.
+   - Once the merge request is approved, merge it into the target branch.
+
+step  6: Syncing Changes
+1. *Update your local repository* after the merge request is merged:
+   bash
+   git checkout main
+   git pull origin main
+   -------------------------------------------------------------
+Assignment 4 
+Implementing BitBucket operations using git
+ Step 1: Creating a Repository
+1. *Sign in* to your Bitbucket account.
+2. *Create a new repository*:
+   - Click the *"Create"* button.
+   - Provide a repository name, set the visibility (public or private), and configure other settings as needed.
+   - Click *"Create repository"* to finalize.
+
+Step 2: Cloning a Repository
+1. *Open your terminal* or command prompt.
+2. *Navigate to the desired directory*:
+   bash
+   cd /path/to/your/directory
+   
+3. *Copy the repository URL* from Bitbucket.
+4. *Clone the repository*:
+   bash
+   git clone <repository_url>
+   
+   - Replace <repository_url> with the URL copied from Bitbucket.
+
+ Step 3 : Making Changes and Creating a Branch
+1. *Navigate into the cloned repository*:
+   bash
+   cd <repository_name>
+   
+2. *Create a new file* named example.txt using your text editor of choice.
+3. *Add content* to example.txt and save the file.
+4. *Return to the command line* and check the status:
+   bash
+   git status
+   
+5. *Stage the changes*:
+   bash
+   git add example.txt
+   
+6. *Commit the changes* with a descriptive message:
+   bash
+   git commit -m "Add content to example.txt"
+   
+7. *Create a new branch* named feature:
+   bash
+   git branch feature
+   
+8. *Switch to the feature branch*:
+   bash
+   git checkout feature
+   
+
+Step 4: Pushing Changes to Bitbucket
+1. *Add the repository URL* as a remote:
+   bash
+   git remote add origin <repository_url>
+   
+   - Replace <repository_url> with your Bitbucket repository URL.
+2. *Push the feature branch* to Bitbucket:
+   bash
+   git push origin feature
+   
+3. *Verify* on Bitbucket that the feature branch has been pushed.
+
+ Step 5 : Collaborating through Pull Requests
+1. *Create a pull request* on Bitbucket:
+   - Navigate to your repository on Bitbucket.
+   - Click on *"Create pull request"*.
+   - Select feature as the source branch and main (or master) as the target branch.
+   - Review the changes and click *"Create pull request"*.
+2. *Review and merge the pull request*:
+   - Add a title and description.
+   - Assign reviewers if necessary.
+   - Once approved, merge the pull request into the target branch.
+
+ Step 6: Syncing Changes
+1. *Update your local repository* after merging:
+   bash
+   git checkout main
+   git pull origin main
+   ----------------------------------------------------------------------------
+DevOps Ass 5
+QUESTION: APPLYING CI/CD PRINCIPLES TO WEB DEVELOPMENT USING JENKINS,GIT, AND LOCAL HTTP SERVER(index.html , index.css files used)
+
+- LAUNCH A UNIX/LINUX INSTANCE (AWS/GCP/AZURE) TAKE ACCESS OF IT (MOBAXTERM) KEEP THE KEY PAIRS HANDY AS THEY ARE IN USE FREQUENTLY.
+- FOR THE INSTANCE GIVE SSH(22) ,HTTP(80) ,HTTPS(443) ,CUSTOM TCP (8080), IN YOUR INBOUND SECURITY GROUP.
+- ALSO GIVE 0.0.0.0/0 (CIDR) IN YOUR OUTBOUND SECURITY GROUP.
+- HERE I HAVE USED UBUNTU(24.04).
+- ON THE SERVER INSTALL APACHE OR NGINX
+  
+1) INSTALL JAVA :
+
+sudo apt update
+
+sudo apt upgrade -y
+
+sudo apt install openjdk-17-jdk -y
+
+java --version
+--------------------------------------------------------------------
+
+2) THEN FOLLOW THESE STEPS TO INSTALL JENKINS: 
+
+-(THESE ARE LONG TERM SUPPORT(LTS) / STABLE RELEASE)
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+jenkins --version (optional)
+----------------------------------------------------------------------
+3) COPY THE PUBLIC IP OF INSTANCE:8080
+4) sudo cat /var/lib/jenkins/secrets/initialAdminPassword (THIS IS THE INITIAL PASS TO LOGIN. THIS IS ONLY FOR THE FIRST TIME)
+5) click on -> install the suggested plugins
+
+GIVE THE NECESSARY CRED :
+
+6) username - 
+7) pass - 
+8) full name - admin11
+
+- NOTE : INSTALL THE (publish over ssh) PLUGIN (RESTART OPTIONAL) 
+-----------------------------------------------------------------------
+## JENKINS OPERATIONS:
+9) COPY THE PUBLIC IP OF THE INSTANCE:8080 -> LOGIN INTO JENKINS
+
+10) GO TO JENKINS DASHBOARD -> MANAGE JENKINS ->  CONFIGURE SYSTEM -> LOOK FOR PUBLISH OVER SSH
+
+11) IN "KEY" COPY THE PRIVATE KEY CONTENTS
+
+12) IN SSH SERVERS -> CLICK ON ADD
+
+13) PROVIDE NAME(DEMO-SERVER)
+    PROVIDE HOSTNAME(IP ADD OF INSTANCE(REMOVE http://_/)(KEEP ONLY THE IP))
+    PROVIDE USERNAME(ubuntu/ec2-user)
+    PROVIDE REMOTE DIRECTORY(/var/www/html/) -> CLICK ON TEST CONFIGURATION(TO CHECK IF THE   SETUP IS DONE CORRECTLY OR NOT) -> CLICK ON APPLY -> CLICK ON SAVE
+
+14) CLICK ON NEW ITEM -> PROVIDE ITEM NAME(DEMO-PROJECT) -> CLICK ON FREESTYLE PROJECT -> CLICK ON OK
+
+15) PROVIDE DESCRIPTION -> CLICK ON GitHub project -> PROVIDE THE PROJECT URL(COPY THE GITHUB URL FROM THE TAB()MUST BE A PUBLIC REPO) -> PROVIDE THE SCM(Git) -> PROVIDE THE REPOSITORY URL(GO TO GitHub IN REPO -> CLICK ON CODE -> COPY THE HTTPS URL) -> SPECIFY THE BRANCH(MASTER OR MAIN)
+
+16) PROVIDE THE BUILD TRIGGER(GitHub hook trigger for GITScm polling)
+    ## MUST ADD A WEBHOOK IN GITHUB 
+    - GO TO GitHub -> YOUR REPO -> SETTINGS -> WEBHOOKS -> COPY THE JENKINS URL FROM THE TAB(http://IP:8080/YOUR_REPO_NAME/) AND PASTE IT IN PAYLOAD URL -> CHECK JUST THE PUSH EVENT -> CLICK ON OK OR UPDATE 
+
+17) PROVIDE THE BUILD ENVIRONMENT(send files or execute commands over SSH after the build runs)
+  - YOUR SERVER NAME WILL NOW BE VISIBLE
+  - PROVIDE THE SOURCE FILES(*/.html,*/.css)(WILL ONLY ALLOWS THOSE FILES WITH THESE EXTENSIONS)
+  - PROVIDE THE REMOTE DIRECTORY(/) 
+
+18) CLICK ON APPLY -> CLICK ON SAVE
+    
+## TILL HERE WE HAVE CREATED OUR PIPELINE
+
+19) GO TO GITHUB -> OPEN THE INDEX.HTML FILE -> DO SOME BASIC CHANGES
+
+20) GO TO JENKINS -> LOOK FOR BUILD QUEUE AND BUILD EXECUTE STATUS -> LOOK FOR THE CONSOLE OUTPUT
+
+21) IF THE CONSOLE OUTPUT IS UNSTABLE(FAILED) 
+  - GO TO SERVER
+  - CHECK THE PERMISSION OF HTML
+  - PROVIDE (sudo chmod 777 -R html)
+
+22) TRY BUILDING AGAIN
+
+23) NOW REFRESH THE PUBLIC IP OF THE INSTANCE AND THE CHNGES WILL NOW BE VISIBLE    
+-----------------------------------------------------------------------------------------------
+
+## WHEN YOU START/STOP THE INSTANCE CHANGE THE IP IN THE FOLLOWING :
+- CHANGE THE HOSTNAME (UPDATED IP)(PAYLOAD URL) IN GITHUB WEBHOOK (GO INSIDE OF THE REPO -> SETTINGS -> WEBHOOK'S)
+- IN JENKINS -> MANAGE JENKINS -> SYSTEM -> LOOK FOR PUBLISH OVER SSH
+- GO IN THE JOB, CLICK ON APPLY -> SAVE
+- GO TO YOUR PIPEPLINE AND THEN CLICK ON BUILD NOW
+----------------------------------------------------------------------
+TO UNDERSTAND BETTER REFER HERE :(USED UBUNTU 24.04)
+
+- SETUP JENKINS, JAVA -> https://youtu.be/tn2Be1AAiVw?si=OEwN-IGS_wzkG9j-
+
+- To Deploy Github Code to Live Server -> https://youtu.be/8RIFmoWPbhQ?si=fB0glwl6NeM2taTH
+---------------------------------------------------------------------------------
+ Assignment 6 QUESTION : CONTAINERIZATION AND APPLICATION DEPLOYMENT WITH DOCKER 
+
+1) LAUNCH AN LINUX/UNIX INSTANCE (I HAVE USED HERE THE UBUNTU 24.04 (NOBLE) INSTANCE FROM AWS).
+2) ACCESS THE INSTANCE WITH SSH USING MOBAXTERM(OR CAN USE ANY OTHER S/W).
+- OPEN MOBAXTERM -> CLICK ON SESSION -> CLICK ON SSH -> PASTE THE PUBLIC IP IN THE REMOTE HOST -> SPECIFY THE USERNAME(ubuntu/ec2-user) -> CLICK ON ADVANCE SETTINGS -> TICK THE USE PRIVATE KEY -> PROVIDE THE PRIVATE KEY. 
+- THIS WILL CONNECT YOU TO YOURS INSTANCE (YOU CAN VERIFY BY USING THE PRIVATE IP).
+
+3) INSTALL DOCKER ON THE INSTANCE USING (https://docs.docker.com/engine/install/ubuntu/)
+- LOOK FOR INSTALL USING THE apt REPOSITORY
+- # Add Docker's official GPG key:
+sudo apt-get update
+
+sudo apt-get install ca-certificates curl
+
+sudo install -m 0755 -d /etc/apt/keyrings
+
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+- # Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+- To install the latest version, run:
+- sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+4) CREATE A NEW DIRECTORY 
+- mkdir docker
+- cd docker
+
+5) CREATE A FILE index.html
+- echo "HELLO,DOCKER!" > index.html
+
+6) CREATE A FILE NAMED dockerfile
+- touch dockerfile
+- ls
+
+7) OPEN THE dockerfile IN TEXT EDITOR AND ADD THE FOLL:
+- sudo vim dockerfile
+- PRESS I(FOR INSERT MODE)
+
+FROM nginx
+COPY index.html /usr/share/nginx/html         (## THIS DOCKERFILE DEFINES A NEW DOCKER IMAGE THAT USES THE OFFICIAL NGINX IMAGE AS A BASE, THEN COPY THE index.html FILE TO APPROPRIATE LOCATION IN THE IMAGE).
+
+- PRESS esc
+- :wq!(TO SAVE AND QUIT)
+
+8) START DOCKER AND BUILD DOCKER IMAGE FROM dockerfile
+
+- sudo service docker status (## CHECK THE STATUS OF docker)
+
+- IF IN STOP OR IN ACTIVE STATE USE (sudo service docker start) 
+
+- docker build -t docker .   (## -t TAGS THE IMAGE WITH THE NAME 'docker').
+  (## HERE docker IS THE FOLDER AND WE HAVE THE dockerfile INSIDE OF THE FOLDER).
+
+- sudo docker images 
+
+9) RUN THE DOCKER CONTAINER FROM THE IMAGE
+- docker run -p 8080:80 docker  (## AFTER RUNNING THIS COMMAND YOU WILL BE PRESENT INSIDE YOUR CONTAINER)(THE COMMAND LINE WILL NOT BE ACCESSIBLE USE ctrl+c TO EXIT)(## THIS TELLS DOCKER TO RUN THE docker CONTAINER AND MAP PORT 8080 ON YOUR LOCAL MACHINE TO PORT 80 INSIDE THE CONTAINER).
+- docker run -d -p 8080:80 docker (## THIS RUNS THE DOCKER CONTAINER IN DETACHED MODE).
+- docker ps (## SHOWS THE RUNNING CONTAINERS).
+
+10) ACCESS THE APP
+- SINCE I HAVE USED THE AWS UBUNTU(24.04) INSTANCE, I WILL COPY THE INSTANCE PUBILC IP:8080
+- THE CONTAINS FROM THE index.html PAGE ARE NOW VISIBLE IN THE BROWSER.
+
+- docker stop container_id (## STOPS THE CONTAINER, IF YOU REFRESH THE PAGE YOU WILL SEE A MSG 'WEB PAGE NOT AVAILABLE').
+- docker rm container_id (## REMOVES THE CONTAINER AND THE DOCKER IMAGE).
+
+-------------------------------------------------------------------------------------------
+QUESTION: APPLYING CI/CD PRINCIPLES TO WEB DEVELOPMENT USING JENKINS,GIT, using Docker  Containers
+Assignment 7 
+Step 1: Install Jenkins
+Install Jenkins on your server (Linux example):
+
+bash
+sudo apt update
+sudo apt install openjdk-11-jdk -y
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins -y
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+Access Jenkins: Open a browser and visit http://<your_server_ip>:8080.
+
+Unlock Jenkins: Retrieve the admin password:
+
+bash
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Step 2: Install Necessary Plugins
+Go to Manage Jenkins → Plugins → Install:
+Git
+Pipeline
+Docker
+Blue Ocean (optional for better visualization)
+
+Step 3: Set Up Git Repository
+Create a Git repository for your web app (e.g., on GitHub, GitLab, etc.).
+Clone it locally:
+bash
+
+git clone https://github.com/your_username/your_repository.git
+Push your project files to this repository:
+bash
+
+git add .
+git commit -m "Initial commit"
+git push origin main
+Step 4: Write a Jenkinsfile
+Create a Jenkinsfile in your project root:
+
+groovy
+pipeline {
+    agent {
+        docker {
+            image 'node:14-alpine' // Adjust based on your app (e.g., Python, Java)
+        }
+    }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/your_username/your_repository.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'npm install' // Adjust based on your build system
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'npm test' // Adjust based on your test suite
+            }
+        }
+        stage('Package Docker Image') {
+            steps {
+                sh 'docker build -t your_app_name .'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'docker run -d -p 8080:80 your_app_name'
+            }
+        }
+    }
+}
+Push this file to your Git repository:
+
+bash
+git add Jenkinsfile
+git commit -m "Added Jenkinsfile"
+git push origin main
+Step 5: Set Up a Jenkins Job
+Go to Jenkins Dashboard → New Item → Choose Pipeline.
+Configure:
+Pipeline script from SCM.
+Set SCM to Git and add your repository URL and credentials.
+Branch: main.
+Step 6: Test and Automate
+Trigger a build manually or by a webhook:
+bash
+curl -X POST http://<jenkins_url>/job/<job_name>/build
+Ensure the pipeline builds, tests, and deploys the application.
+Step 7: Dockerize Your Application
+Write a Dockerfile in your project root:
+
+dockerfile
+FROM node:14-alpine
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["npm", "start"]
+EXPOSE 80
+Build the Docker image manually (optional):
+
+bash
+docker build -t your_app_name .
+Run the container (optional):
+
+bash
+docker run -d -p 8080:80 your_app_name
+
+----------------------------------------------------------------------------------------
+Assignment 8 Simple Maven Project 
+Step By Step Implementation
+Step 1: Create A New Maven Project
+
+First, we will create a new maven project. For this, we will open our Eclipse IDE then Go to File > New > Maven Project. 
+
+Once we click on Maven Project we will get a prompt for setting up our Workspace location.
+After setting Workspace location according to our choice. We will click on Next to go to further project setup steps.
+
+Step 2: Setting Up Archetype
+In this step, we will setup the archetype for our maven project. Archetype is a templating toolkit. It provides a templating solution for your project and helps to create a sample project structure that you can extend based on your business requirements. For this tutorial, we will use the maven-archetype-j2ee-simple archetype for our project.
+
+After choosing the archetype we will click on Next and it will ask for the details like Group Id, Artifact Id, and Package information.
+
+Group Id – It’s a unique identifier to uniquely identify the project in a maven repository.
+Artifact Id – It’s basically the project name.
+For this tutorial, we will be using the following details.
+
+After adding all these details we need to click on the Finish button. Maven will start creating your project and after a few seconds, your project will be created.
+
+Step 6: Run the Project
+You can run the Java application using:
+mvn exec:java -Dexec.mainClass="com.example.App"
+-----------------------------------------------------------------------------------------------
