@@ -1,0 +1,47 @@
+1.Git - version control system tool that helps to track changes in code.
+
+2.Github - website where devlopers store & manage code using git.
+
+3.commit - change
+
+4.clone - 
+	git clone -repository link-
+	remote -> repo on githib
+	local -> laptop
+
+5.status->
+	git status
+5.1.types
+	i)  modified
+	ii) unmodified
+	iii)untracked
+	iv) staged->
+		a)add->
+		git add -filename-OR (use(.) dot for all files) 
+		b)commit->
+		git commit -m"message"
+
+6.push-uploads local repo to github(remote)
+	git push origin main
+
+7.init-creates a new git repo
+	a.git init
+	b.git remote add origin -repository link-	
+	c.git remote -v (verify remote)
+	d.git branch (to check branch)
+	e.git branch -M main (rename branch)
+	f.git push (can add -u) origin main
+
+8.branch:
+	git branch (to check on which branch weare)
+	git branch -M main (rename branch ->main)
+	git checkout -branchname- (to navigate to that branch)
+	git checkout -b -branchname- (to create branch)
+	git branch -d -branchname- (to delete)
+	git push origin feature (for push branch to remote git)
+	git diff main (to check difference)
+	git merge -branchname- (to merge 2 branches)
+	git pull origin main (to get all content from github to local) 
+
+9.git log --oneline --graph --all
+	View the chronological history of commits
